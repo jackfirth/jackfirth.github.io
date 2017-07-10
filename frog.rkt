@@ -5,8 +5,8 @@
 (define/contract (init)
   (-> any)
   (current-scheme/host "https://jackfirth.github.io")
-  (current-title "My Blog")
-  (current-author "The Unknown Author"))
+  (current-title "Executable Manifestos")
+  (current-author "Jack Firth"))
 
 ;; Called once per post and non-post page, on the contents.
 (define/contract (enhance-body xs)
