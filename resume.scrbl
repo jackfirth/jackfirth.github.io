@@ -1,7 +1,7 @@
 #lang scribble/manual
 
 
-@title{Jacqueline Firth's Resume}
+@title{Jacqueline Firth's Résumé}
 
 @tt{jackhfirth@"@"gmail.com, (760) 902-4112}
 
