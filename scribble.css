@@ -30,6 +30,26 @@
   font-weight: bold;
 }
 
+/* Emphasis: alternate italics and normal as we nest */
+.emph {
+  font-style: italic;
+}
+.emph .emph {
+  font-style: normal;
+}
+.emph .emph .emph {
+  font-style: italic;
+}
+.emph .emph .emph .emph {
+  font-style: normal;
+}
+.emph .emph .emph .emph .emph {
+  font-style: italic;
+}
+.emph .emph .emph .emph .emph .emph {
+  font-style: normal;
+}
+
 /* ---------------------------------------- */
 
 p, .SIntrapara {
@@ -116,10 +136,18 @@ table td {
   color: #e0e0e0;
 }
 
+.navleft .tocsettoggle {
+  display: none;
+}
+
 .searchform {
   display: inline;
   margin: 0;
   padding: 0;
+}
+
+.nosearchform {
+  display: none;
 }
 
 .searchbox {
@@ -128,8 +156,11 @@ table td {
   padding: 0px;
   background-color: #eee;
   border: 1px solid #ddd;
-  text-align: center;
   vertical-align: middle;
+}
+
+.searchbox::placeholder {
+  text-align: center;
 }
 
 #contextindicator {
@@ -190,6 +221,7 @@ table td {
   font-size: 85%;
   border: 0.5em solid #F5F5DC;
   margin: 0 0 0 0;
+  white-space: normal; /* in case margin note is inside code sample */
 }
 
 .refcontent {
@@ -366,10 +398,6 @@ ol ol ol ol { list-style-type: upper-alpha; }
   margin-right: 1em;
   margin-top: 0em;
   white-space: nowrap;  
-  background-color: #f5f5f5;          /* like Bootstrap */
-  border: 1px solid rgba(0,0,0,0.15); /* like Boostrap */
-  padding: 9.5px;                     /* like Boostrap */
-  font-family: monospace;
 }
 
 .SVInsetFlow {
@@ -451,6 +479,10 @@ ol ol ol ol { list-style-type: upper-alpha; }
   border: 0;
 }
 
+.SVerbatim {
+  white-space: nowrap;
+}
+
 .SAuthorListBox {
   position: relative;
   float: right;
@@ -481,4 +513,36 @@ ol ol ol ol { list-style-type: upper-alpha; }
     margin-right: 13em;
     margin-left: 0;
   }
+}
+
+/** Begin headings */
+
+/* Hide the button group by default, but show them on hovering the heading title */
+.button-group {
+    padding-left: 0.3em;
+    visibility: hidden;
+    position: absolute;
+}
+.heading:hover > .button-group {
+    visibility: visible;
+}
+
+.button-group > a {
+    margin: 0 0.25em;
+}
+
+.button-group > a, .button-group > a:hover {
+    text-decoration: none;
+}
+
+.heading-anchor {
+    font-size: 60%;
+    /* A trick to color an emoji from https://stackoverflow.com/questions/32413731/color-for-unicode-emoji */
+    color: transparent;
+    text-shadow: 0 0 0 gray;
+    vertical-align: 5%;
+}
+
+.heading-source {
+    visibility: hidden;
 }
