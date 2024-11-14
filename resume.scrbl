@@ -67,7 +67,7 @@ to life circumstances.
   platform. Multiple core Racket projects rely on its integration with GitHub.}
 
  @item{@hyperlink["https://github.com/jackfirth/rebellion"]{Rebellion} --- A collection of core
-   libraries for Racket created entirely by myself. Includes core data structures, stream processing
+   libraries for Racket created entirely by myself. Includes data structures, stream processing
   libraries built around transducers, concurrency primitives, and various other useful libraries.}
 
  @item{@hyperlink["https://github.com/racket/rhombus"]{Rhombus} --- An experimental research language
